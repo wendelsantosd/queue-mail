@@ -1,8 +1,11 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 export default {
-  host: "smtp.mailtrap.io",
-  port: 2525,
+  host: process.env.MAIL_HOST,
+  port: process.env.MAIL_PORT,
   auth: {
-    user: "b34573759f0701",
-    pass: "a5922c668646d0"
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASSWORD
   }
 }
